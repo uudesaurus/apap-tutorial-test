@@ -60,4 +60,9 @@ public class BukuRestServiceImpl implements BukuRestService {
     public List<Buku> retrieveRestAllBuku() {
         return bukuDb.sortBukuByJudulLower();
     };
+
+    @Override
+    public List<Buku> getBukuByAwalanJudul(String awalan) {
+    return bukuRepository.findByJudulStartingWith(awalan);
+    }
 }

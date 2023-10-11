@@ -12,4 +12,5 @@ public interface BukuRestService {
     Buku getRestBukuById(UUID id);
     Mono<String> getStatus(String code);
     Mono<BukuDetail> postStatus();
+    List<Buku> getBukuByAwalanJudul(String awalan);
 }

@@ -68,4 +68,9 @@ public class BukuRestController {
     private Mono<BukuDetail> postStatus() {
         return bukuRestService.postStatus();
     }
+    
+    @GetMapping(value= "/buku/awa")
+    public List<Buku> getBukuByAwalan(@RequestParam("awalan") String awalan) {
+    return bukuService.getBukuByAwalanJudul(awalan);
+    }
 }
