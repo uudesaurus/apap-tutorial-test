@@ -33,6 +33,7 @@ public class Buku {
     @Size(max = 100)
     @Column(name = "judul", nullable = false)
     private String judul;
+    
     @NotNull
     @Column(name = "judul_lower")
     private String judulLower;

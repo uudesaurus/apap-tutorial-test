@@ -11,6 +11,7 @@ import apap.tutorial.bacabaca.model.Buku;
 
 @Service
 public class BukuServiceImpl implements BukuService{
+    
     @Autowired
     BukuDb bukuDb;
 
@@ -45,7 +46,7 @@ public class BukuServiceImpl implements BukuService{
             buku.setPenerbit(bukuFromDto.getPenerbit());
             bukuDb.save(buku);
         }
-        re1 turn buku;
+        return buku;
     }
 
     @Override

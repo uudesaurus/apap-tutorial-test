@@ -18,13 +18,18 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 public class CreateBukuRequestDTO {
+    
     @NotBlank
     private String judul;
+    
     @NotBlank
     private String tahunTerbit;
+    
     @Min(0L)
     private BigDecimal harga;
+    
     @NotNull
     private Penerbit penerbit;
+    
     private List<Penulis> listPenulis;
 }
