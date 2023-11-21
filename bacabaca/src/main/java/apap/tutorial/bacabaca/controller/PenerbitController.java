@@ -67,12 +67,4 @@ public class PenerbitController {
         model.addAttribute("penerbit", penerbit);
         return "view-penerbit";
     }
-
-    @GetMapping("penerbit/chart")
-    public String charPenerbit(Model model){
-        var data = penerbitService.getPublisherBookCounts();
-        model.addAttribute("data", data);
-
-        return "view-penerbit-chart";
-    }
 }

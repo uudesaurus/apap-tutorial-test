@@ -13,16 +13,12 @@ import org.mapstruct.MappingTarget;
 public interface BukuMapper {
 
     Buku createBukuRequestDTOToBuku(CreateBukuRequestDTO createBukuRequestDTO);
-    
-    
     @AfterMapping
     default void judulLowerCreate(CreateBukuRequestDTO createBukuRequestDTO, @MappingTarget Buku buku){
         buku.setJudulLower(createBukuRequestDTO.getJudul().toLowerCase());
     }
 
     Buku updateBukuRequestDTOToBuku(UpdateBukuRequestDTO updateBukuRequestDTO);
-    
-    
     @AfterMapping
     default void judulLowerUpdate(UpdateBukuRequestDTO updateBukuRequestDTO, @MappingTarget Buku buku){
         buku.setJudulLower(updateBukuRequestDTO.getJudul().toLowerCase());

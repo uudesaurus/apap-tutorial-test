@@ -11,16 +11,12 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "penulis")
-@JsonIgnoreProperties(value={"listBuku","listSertifikasi"}, allowSetters = true)
-
 public class Penulis {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
